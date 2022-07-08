@@ -1,0 +1,8 @@
+:host {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+img {
+  max-width: 80vw;
+  max-height: 80vh; }

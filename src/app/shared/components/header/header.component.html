@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+      <div class="row between-xs middle-xs header-row">
+          <nav>
+            <a mat-button routerLink="/home" routerLinkActive="active">Home</a>
+            <a mat-button routerLink="/products" routerLinkActive="active">Products</a>
+            <a mat-button routerLink="/contact" routerLinkActive="active">Contact</a>
+            <a mat-button (click)="logout()" >Salir</a>
+        </nav>  
+        
+        <button  routerLink="/order" mat-raised-button [matBadge]="counter$ | async" matBadgeColor="warn">
+            <mat-icon>shopping_cart</mat-icon>
+            Carrito
+        </button>
+      </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div [ngSwitch]="title">
+    <p *ngSwitchCase="'daniel'">este es daniel</p>
+    <p *ngSwitchCase="'alejandro'">este es alejandro</p>
+    <p *ngSwitchCase="'molina'">este es molina</p>
+    <p *ngSwitchDefault>no se quien eres</p>
+</div>

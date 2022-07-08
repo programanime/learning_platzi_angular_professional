@@ -1,0 +1,22 @@
+<section *ngIf="product">
+    
+    <figure>
+        <img [src]="product.image" [alt]="product.title" />
+    </figure>
+
+    <ul>
+        <li>Nombre: {{product.title}}</li>
+        <li>Precio: {{ product.price | currency }}</li>
+    </ul>
+    <p>
+        {{ product.description }}
+    </p>
+    
+    <button (click)="updateProduct()" mat-raised-button color="primary">Editar</button>
+    <button (click)="deleteProduct()" mat-raised-button color="primary">Delete</button>
+    <button (click)="test()" mat-raised-button color="primary">test</button>
+    <button (click)="testSubError()" mat-raised-button color="primary">test sub error</button>
+    <button (click)="getFile()" mat-raised-button color="primary">file</button>
+</section>
+
+

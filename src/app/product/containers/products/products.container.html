@@ -1,0 +1,10 @@
+<p>i am container</p>
+
+<button mat-raised-button color="warn" routerLink="create">Crear producto</button>
+<div class="product-grid">
+    <app-product 
+        *ngFor="let product of products" 
+        [product]="product" 
+        (productClicked)="addProductToCart($event)">
+    </app-product>
+</div>
